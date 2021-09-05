@@ -1,0 +1,12 @@
+.space {
+    background: url("assets/space.png");
+    width: 70%;
+
+    position: fixed;
+    top: 3%;
+    bottom: 3%;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
