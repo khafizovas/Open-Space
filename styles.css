@@ -13,3 +13,10 @@
 .planet-area, .planet, .rocket {
     position: absolute;
 }
+
+.planet-area {
+    width: 50%;
+
+    top: 20%;
+    bottom: 0;
+}
