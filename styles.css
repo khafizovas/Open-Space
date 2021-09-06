@@ -36,3 +36,10 @@
 
     transform: rotate(25deg);
 }
+
+.control-panel {
+    border: solid red;
+
+    float: right;
+    margin: 5%;
+}
