@@ -38,8 +38,22 @@
 }
 
 .control-panel {
-    border: solid red;
+    background: #505050;
+
+    width: 40%;
 
     float: right;
     margin: 5%;
+
+    text-align: center;
+}
+
+.control-panel * {
+    margin: 1%;
+}
+
+input[type="range"] {
+    -webkit-appearance: slider-vertical;
+
+    width: 10%;
 }
