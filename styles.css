@@ -24,13 +24,13 @@
 }
 
 .rocket {
-    width: 15%;
+    width: 30%;
 
     z-index: -1;
 
-    position: absolute;
-    top: 43%;
-    left: 23%;
+    position: relative;
+    margin-bottom: -42%;
+    margin-left: 45%;
 
     transform: rotate(25deg);
 }
@@ -48,8 +48,11 @@
     text-align: center;
 }
 
-.control-panel * {
-    margin: 1%;
+.check-buttons, .levers {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 5%;
 }
 
 input[type="range"] {
