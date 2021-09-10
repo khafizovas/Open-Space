@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Open Space</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Open Space</title>
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="space">
-        <div class="planet-area">
-            <img class="rocket" src="assets/rocket.png" alt="Rocket">
-            <img class="planet" src="assets/mars.png" alt="Mars">
-        </div>
-        <div class="control-panel">
-            <input type="text" placeholder="Enter password to unlock">
-            <button>OK</button>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-            <div class="check-buttons">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
-                <input type="checkbox">
+    <body>
+        <div class="space">
+            <div class="planet-area">
+                <img class="rocket" src="assets/rocket.png" alt="Rocket">
+                <img class="planet" src="assets/mars.png" alt="Mars">
             </div>
-            <div class="levers">
-                <input type="range">
-                <input type="range">
-                <input type="range">
-                <input type="range">
-                <input type="range">
+
+            <div class="control-panel">
+                <input type="textbox" placeholder="Enter password to unlock">
+                <input type="button" value="OK">
+
+                <div class="check-buttons">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                </div>
+
+                <div class="levers">
+                    <input type="range">
+                    <input type="range">
+                    <input type="range">
+                    <input type="range">
+                    <input type="range">
+                </div>
+
+                <input type="button" value="Launch">
             </div>
-            <button>Launch</button>
         </div>
-    </div>
-</body>
+    </body>
 </html>
