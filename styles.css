@@ -52,6 +52,7 @@
 
 .control-panel__inner {
     margin: 5%;
+    padding: 5%;
 
     background:
             radial-gradient(black 15%, transparent 16%) 0 0,
@@ -73,4 +74,25 @@ input[type="range"] {
     -webkit-appearance: slider-vertical;
     width: 3%;
     height: 100px;
+}
+
+input[type="textbox"], input[value="OK"] {
+    border: solid rgb(115,121,9);
+    border-radius: 25%;
+
+    background: #282828;
+
+    height: 2em;
+}
+
+input[value="OK"] {
+    background: rgb(115,121,9);
+}
+
+input[value="Launch"] {
+    background: rgb(255,251,0);
+    border-radius: 30%;
+    border: solid rgb(73,45,9);
+
+    font-size: 1.5em;
 }
