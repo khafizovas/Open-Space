@@ -8,31 +8,28 @@
 
     left: 50%;
     transform: translateX(-50%);
-}
 
-.planet-area, .planet, .rocket {
-    position: absolute;
+    display: flex;
 }
 
 .planet-area {
     width: 50%;
 
-    top: 20%;
-    bottom: 0;
+    align-self: flex-end;
 }
 
 .planet {
     width: 90%;
-
-    left: 0;
-    bottom: 0;
 }
 
 .rocket {
-    width: 40%;
+    width: 15%;
 
-    top: 23%;
-    right: 20%;
+    z-index: -1;
+
+    position: absolute;
+    top: 43%;
+    left: 23%;
 
     transform: rotate(25deg);
 }
@@ -40,10 +37,8 @@
 .control-panel {
     background: #505050;
 
-    width: 40%;
-
-    float: right;
-    margin: 5%;
+    width: 30%;
+    height: fit-content;
 
     text-align: center;
 }
@@ -54,6 +49,10 @@
 
 input[type="range"] {
     -webkit-appearance: slider-vertical;
+    width: 3%;
+    height: 100px;
+}
 
-    width: 10%;
+input[type="checkbox"], input[type="range"] {
+    margin-right: 5%;
 }
