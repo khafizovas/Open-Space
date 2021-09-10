@@ -10,6 +10,7 @@
     transform: translateX(-50%);
 
     display: flex;
+    justify-content: space-between;
 }
 
 .planet-area {
@@ -40,6 +41,10 @@
     width: 30%;
     height: fit-content;
 
+    position: relative;
+    right: 10%;
+
+    align-self: center;
     text-align: center;
 }
 
