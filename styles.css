@@ -36,7 +36,9 @@
 }
 
 .control-panel {
-    background: #505050;
+    background: rgb(73,45,9);
+    background: linear-gradient(90deg, rgba(73,45,9,1) 0%, rgba(115,121,9,1) 50%, rgba(255,251,0,1) 100%);
+    background-size: 20px 20px;
 
     width: 30%;
     height: fit-content;
@@ -46,6 +48,18 @@
 
     align-self: center;
     text-align: center;
+}
+
+.control-panel__inner {
+    margin: 5%;
+
+    background:
+            radial-gradient(black 15%, transparent 16%) 0 0,
+            radial-gradient(black 15%, transparent 16%) 8px 8px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+            radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px,
+            #282828;
+    background-size: 16px 16px;
 }
 
 .check-buttons, .levers {
