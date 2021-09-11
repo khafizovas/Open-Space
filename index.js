@@ -13,3 +13,8 @@ function disableInputs(e, inputs) {
     inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
 }
 
+function handleUnlock(e, password, inputs) {
+    if (password === CORRECT_PASSWORD) {
+        inputs.forEach(input => input.removeAttribute('disabled'));
+    }
+}
