@@ -76,13 +76,17 @@ input[type="range"] {
     height: 100px;
 }
 
-input[type="textbox"], input[value="OK"] {
+input[type="password"], input[value="OK"] {
     border: solid rgb(115,121,9);
     border-radius: 25%;
 
     background: #282828;
 
     height: 2em;
+}
+
+input[type="password"] {
+    color: rgb(115,121,9);
 }
 
 input[value="OK"] {
