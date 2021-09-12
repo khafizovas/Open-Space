@@ -106,7 +106,7 @@ input[value="Launch"] {
 }
 
 .fly {
-    animation: fly 3s forwards;
+    animation: fly 2s linear forwards;
 }
 
 @keyframes fly {
