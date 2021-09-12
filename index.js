@@ -1,17 +1,19 @@
 const CORRECT_PASSWORD = 'TrustNo1';
 
-document.addEventListener('DOMContentLoaded', handleLoad);
+window.onload = handleLoad;
 
-function handleLoad(e) {
+function handleLoad() {
     const inputs = [...document.querySelectorAll('input')];
     const launchInputs = inputs.slice(2);
 
     disableInputs(launchInputs);
-    inputs[1].addEventListener('click', () => unlockInputs(inputs[0].value, launchInputs));
+    inputs[1].onclick = () => unlockInputs(inputs[0].value, launchInputs);
 
     for (let i = 0; i < launchInputs.length - 1; ++i) {
-        launchInputs[i].addEventListener('change', () => handleInputChange(launchInputs));
+        launchInputs[i].onchange = () => handleInputChange(launchInputs);
     }
+
+    launchInputs[launchInputs.length - 1].onclick = () => launchRocket(document.querySelector('.rocket'));
 }
 
 function disableInputs(inputs) {
@@ -37,3 +39,6 @@ function handleInputChange(inputs) {
     inputs[inputs.length - 1].removeAttribute('disabled');
 }
 
+function launchRocket(rocket) {
+    rocket.className += ' fly'
+}

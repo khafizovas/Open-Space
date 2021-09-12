@@ -100,3 +100,13 @@ input[value="Launch"] {
 
     font-size: 1.5em;
 }
+
+.fly {
+    animation: fly 3s forwards;
+}
+
+@keyframes fly {
+    100% {
+        transform: translate(100%, -30rem) rotate(25deg);
+    }
+}
