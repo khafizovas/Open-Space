@@ -4,9 +4,14 @@ document.addEventListener('DOMContentLoaded', handleLoad);
 
 function handleLoad(e) {
     const inputs = [...document.querySelectorAll('input')];
+    const launchInputs = inputs.slice(2);
 
-    disableInputs(inputs.slice(2));
-    inputs[1].addEventListener('click', () => unlockInputs(inputs[0].value, inputs.slice(2)));
+    disableInputs(launchInputs);
+    inputs[1].addEventListener('click', () => unlockInputs(inputs[0].value, launchInputs));
+
+    for (let i = 0; i < launchInputs.length - 1; ++i) {
+        launchInputs[i].addEventListener('change', () => handleInputChange(launchInputs));
+    }
 }
 
 function disableInputs(inputs) {
@@ -20,3 +25,15 @@ function unlockInputs(password, inputs) {
         }
     }
 }
+
+function handleInputChange(inputs) {
+    for (let i = 0; i < inputs.length - 1; ++i) {
+        if (!(inputs[i].checked || (inputs[i].value === '100'))) {
+            inputs[inputs.length - 1].setAttribute('disabled', 'disabled');
+            return;
+        }
+    }
+
+    inputs[inputs.length - 1].removeAttribute('disabled');
+}
+
