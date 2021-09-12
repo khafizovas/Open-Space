@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', handleLoad);
 function handleLoad(e) {
     const inputs = [...document.querySelectorAll('input')];
 
-    disableInputs(e, inputs.slice(2));
-    inputs[1].addEventListener('click', () => handleUnlock(e, inputs[0].value, inputs.slice(2)));
+    disableInputs(inputs.slice(2));
+    inputs[1].addEventListener('click', () => unlockInputs(inputs[0].value, inputs.slice(2)));
 }
 
-function disableInputs(e, inputs) {
+function disableInputs(inputs) {
     inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
 }
 
-function handleUnlock(e, password, inputs) {
+function unlockInputs(password, inputs) {
     if (password === CORRECT_PASSWORD) {
-        inputs.forEach(input => input.removeAttribute('disabled'));
+        for (let i = 0; i < inputs.length - 1; ++i) {
+            inputs[i].removeAttribute('disabled')
+        }
     }
 }
