@@ -89,6 +89,10 @@ input[type="password"] {
     color: rgb(115,121,9);
 }
 
+input[type="button"]:enabled:hover {
+    cursor: pointer;
+}
+
 input[value="OK"] {
     background: rgb(115,121,9);
 }
